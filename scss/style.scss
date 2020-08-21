@@ -1,0 +1,194 @@
+@mixin font {
+	font-size: 14px;
+	font-family: 'Playfair Display', serif;
+	color: #626262;
+}
+
+body {
+	min-width: 320px;
+	@include font;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: #b4ad9e;
+
+	&:hover {
+		color: #898377;
+	}
+}
+
+p {
+	line-height: 1.5rem;
+}
+
+h2, h3 {
+	margin: 1rem 0;
+	font-size: 30px;
+}
+
+header{
+
+	.navbar {
+		padding: 0.5rem 0;
+	}
+
+	.navbar-light {
+		background-color: #fff;
+	}
+
+	.navbar-brand {
+		font-family: 'Inconsolata', monospace;
+		font-size: 30px;
+		color: #000;
+		text-transform: uppercase;
+	}
+
+	.nav-item {
+		text-transform: uppercase;
+		margin-left: 50px;
+
+		a {
+
+			&::after{
+				content: '';
+				display: block;
+				width: 100%;
+				background-color: #ccc;
+				height: 1px;
+				transform: scale(0);
+				transition: all .3s;
+			}
+
+			&:hover::after{
+				transform: scale(1);
+			}
+
+		}
+	}
+} 
+
+
+#slider {
+	margin-bottom: 50px;
+}
+
+.post-category, .link-more {
+	font-family: 'Ubunt', sans-serif;
+	font-size: 14px;
+	color: #b4ad9e;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.post-title {
+	color: #626262;
+}
+
+.greed-posts {
+	margin-top: 100px;
+	margin-bottom: 100px;
+
+	.card {
+		border: 0;
+		margin-bottom: 100px;
+	}
+
+	.card-body {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.card-img-top {
+		max-height: 300px;
+		border-radius: 0;
+	}
+}
+
+.load-more {
+	padding: 1rem 2rem;
+	border-color: #626262;
+
+	span {
+		display: none;
+	}
+}
+
+.signup {
+	background-color: #f0f0f0f0;
+	padding: 70px 0;
+
+	h3 {
+		color: #333;
+	}
+
+	form {
+		margin-top: 70px;
+	}
+
+	.form-input {
+		position: relative;
+	}
+
+	.form-control {
+		border: 0;
+		border-bottom: 1px solid #000;
+		border-radius: 0;
+		background-color: transparent;
+
+		&:focus {
+			box-shadow: none;
+		}
+	}
+}
+
+
+.form-input .btn{
+	position: absolute;
+	right: 0;
+	top: -5px;
+	font-size: 25px;
+}
+
+
+
+@media only screen and (max-width: 1199px) {
+
+	.greed-posts .card-img-top {
+		max-height: 280px;
+	}
+
+}
+
+@media only screen and (max-width: 991px) {
+
+	.greed-posts .card-img-top {
+		max-height: 205px;
+	}
+
+	header .nav-item {
+		margin-left: 0;
+	}
+
+}
+
+@media only screen and (max-width: 767px) {
+	
+	.greed-posts {
+		margin-top: 50px;
+		margin-bottom: 50px;
+
+		.card{
+			margin-bottom: 50px;
+		}
+
+		.card-img-top {
+			max-height: 100%;
+		}
+
+	}
+}
