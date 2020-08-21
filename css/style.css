@@ -27,6 +27,10 @@ h2, h3 {
 	font-size: 30px;
 }
 
+header .navbar {
+	padding: 0.5rem 0;
+}
+
 header .navbar-light {
 	background-color: #fff;
 }
@@ -89,7 +93,7 @@ header .nav-item a:hover::after{
 }
 
 .greed-posts .card-img-top {
-	max-height: 350px;
+	max-height: 300px;
 	border-radius: 0;
 }
 
@@ -100,4 +104,78 @@ header .nav-item a:hover::after{
 
 .load-more span {
 	display: none;
+}
+
+.signup {
+	background-color: #f0f0f0f0;
+	padding: 70px 0;
+}
+
+.signup h3 {
+	color: #333;
+}
+
+.signup form {
+	margin-top: 70px;
+}
+
+.signup .form-input {
+	position: relative;
+}
+
+.signup .form-control {
+	border: 0;
+	border-bottom: 1px solid #000;
+	border-radius: 0;
+	background-color: transparent;
+}
+
+.signup .form-control:focus {
+	box-shadow: none;
+}
+
+.form-input .btn{
+	position: absolute;
+	right: 0;
+	top: -5px;
+	font-size: 25px;
+}
+
+
+
+@media only screen and (max-width: 1199px) {
+
+	.greed-posts .card-img-top {
+		max-height: 280px;
+	}
+
+}
+
+@media only screen and (max-width: 991px) {
+
+	.greed-posts .card-img-top {
+		max-height: 205px;
+	}
+
+	header .nav-item {
+		margin-left: 0;
+	}
+
+}
+
+@media only screen and (max-width: 767px) {
+
+	.greed-posts {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	.greed-posts .card{
+		margin-bottom: 50px;
+	}
+
+	.greed-posts .card-img-top {
+		max-height: 100%;
+	}
+
 }

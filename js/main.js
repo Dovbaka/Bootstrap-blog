@@ -15,7 +15,7 @@ $(function () {
       			loader.removeClass('d-inline-block');
       			btn.attr('disabled', false);
       			$('.after-posts').before(res);
-      		},2000);
+      		},1300);
       	},
       	error: function(){
       		btn.attr('disabled', false);
@@ -25,3 +25,9 @@ $(function () {
       })
     });
   });
+
+$("#scrollToContent").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".greed-posts").offset().top 
+    }, 1000);
+});
